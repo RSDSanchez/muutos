@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import { Container } from 'reactstrap';
 import MainNavbar from './MainNavbar';
 
 export default function Layout({ children, title = 'Muutos Digital' }) {
