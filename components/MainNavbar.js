@@ -27,7 +27,10 @@ const MainNavbar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/services">Servicios</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/contact">Contacto</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/geuvadan">GitHub</NavLink>
