@@ -1,5 +1,10 @@
+import Layout from '../components/Layout';
+
 export default function Contact() {
   const title = 'Muutos Digital - Contacto';
-  return <h1>Contato</h1>;
-  y;
+  return (
+    <Layout title={title}>
+      <h1>Contacto</h1>
+    </Layout>
+  );
 }
