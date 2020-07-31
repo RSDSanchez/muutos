@@ -1,6 +1,7 @@
 import { Jumbotron, Container } from 'reactstrap';
+import { withTranslation } from '../i18n';
 
-export default function Hero() {
+const Hero = ({ t }) => {
   const title = 'Muutos Digital - Home';
   return (
     <Jumbotron fluid>
@@ -10,7 +11,14 @@ export default function Hero() {
           Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
           non commodo luctus.
         </p>
+        <p>{t('welcome')}</p>
       </Container>
     </Jumbotron>
   );
-}
+};
+
+Hero.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+});
+
+export default withTranslation('common')(Hero);

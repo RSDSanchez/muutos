@@ -2,9 +2,11 @@ import '../styles/globals.css';
 import '../styles/transitions.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Head from 'next/head';
-import Layout from '../components/Layout';
 
-export default function MyApp({ Component, pageProps }) {
+import App from 'next/app';
+import { appWithTranslation } from '../i18n';
+
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -15,4 +17,8 @@ export default function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   );
-}
+};
+
+MyApp.getInitialProps = async (appContext) => ({ ...(await App.getInitialProps(appContext)) });
+
+export default appWithTranslation(MyApp);

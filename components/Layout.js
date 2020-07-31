@@ -1,15 +1,11 @@
-import Link from 'next/link';
 import Head from 'next/head';
-import { Container } from 'reactstrap';
 import MainNavbar from './MainNavbar';
 
+import { PageTransition } from 'next-page-transitions';
 import Loader from '../components/Loader';
 
-import { PageTransition } from 'next-page-transitions';
-
-export default function Layout({ children, title = 'Muutos Digital' }) {
+const Layout = ({ children, title = 'Muutos Digital' }) => {
   const TIMEOUT = 400;
-
   return (
     <div>
       <Head>
@@ -35,8 +31,9 @@ export default function Layout({ children, title = 'Muutos Digital' }) {
       >
         {children}
       </PageTransition>
-
       <footer>{'I`m here to stay'}</footer>
     </div>
   );
-}
+};
+
+export default Layout;

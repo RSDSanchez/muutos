@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head></Head>
         <body>
           <Main />
